@@ -1,0 +1,47 @@
+<nav>
+  <mat-toolbar color="primary">
+      <a routerLink="">
+        <span><mat-icon>directions_boat</mat-icon><span class="brand-name">Pan</span>Shipping</span> 
+      </a>       
+      <div class="link-container">
+        <a routerLink="/user" mat-button *ngIf="isLoggedIn()">
+          User
+        </a>
+        <a routerLink="/product" mat-button>          
+          Product
+        </a>
+        <a *ngIf="!isLoggedIn()" routerLink="/login" mat-raised-button color="warn">          
+          Login
+        </a>
+        <a *ngIf="isLoggedIn()" mat-raised-button color="warn" (click)="signOutClicked()">          
+          Sign out
+        </a>
+      </div>
+      <!-- Humburger Menu -->
+      <button mat-button [matMenuTriggerFor]="menu" class="menu-btn">
+          <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" class="menu-box">            
+        <a routerLink="/user">
+          <button mat-menu-item *ngIf="isLoggedIn()">
+            User
+          </button>
+        </a>
+        <a routerLink="/product">          
+          <button mat-menu-item>
+            Product
+          </button>
+        </a>
+        <button mat-menu-item *ngIf="!isLoggedIn()">
+          <a routerLink="/login" mat-raised-button color="warn">          
+            Login
+          </a>
+        </button>
+        <button mat-menu-item *ngIf="isLoggedIn()">
+          <a mat-raised-button color="warn" (click)="signOutClicked()">          
+            Sign out
+          </a>
+        </button>
+      </mat-menu>
+  </mat-toolbar>
+</nav>

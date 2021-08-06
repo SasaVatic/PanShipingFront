@@ -1,0 +1,57 @@
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.brand-name {
+    color: #FDD835;
+}
+
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+mat-icon {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    color: #fff;
+}
+
+::ng-deep .mat-menu-content {
+    background-color: #673AB7;
+    width: 100vw;
+}
+
+.link-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.link-box a {
+    display: flex;
+    align-items: center;
+}
+
+.menu-btn {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+    .link-container {
+        display: none;
+    }
+}

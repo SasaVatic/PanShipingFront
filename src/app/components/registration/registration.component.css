@@ -1,0 +1,38 @@
+.registration-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 50px 50px 50px;
+    background-color: #673AB7;
+}
+
+mat-card {
+    max-width: 500px;
+    width: 500px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+button {
+    margin-top: 1rem;
+}
+
+.input-error-message {
+    color: #f00;
+}
+
+.ship-img {
+    position: fixed;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .ship-img {
+        display: none;
+    }
+}
